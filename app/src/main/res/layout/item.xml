@@ -4,147 +4,180 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginStart="11dp"
-        app:cardElevation="@dimen/cardview_default_elevation"
-        app:cardCornerRadius="10dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/img"
-                android:transitionName="img"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                tools:ignore="UnusedAttribute"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/vertical_line"
+            android:layerType="software" />
 
-            <ImageView
-                android:id="@+id/shadow_bottom"
-                android:src="@drawable/bottom_shadow"
-                android:layout_alignBottom="@id/img"
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginStart="11dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="10dp">
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"/>
-
-            <ProgressBar
-                android:id="@+id/progress_load_photo"
-                style="@android:style/Widget.ProgressBar.Small"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                />
-
-            <TextView
-                android:id="@+id/author"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10dp"
-                android:maxLines="1"
-                android:gravity="bottom"
-                android:text="Author"
-                android:textColor="@android:color/white"
-                android:ellipsize="end"
-                android:layout_alignTop="@id/layout_date"
-                android:layout_alignEnd="@id/layout_date"
-                android:layout_alignStart="@id/title"/>
-            <FrameLayout
-                android:id="@+id/layout_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/img"
-                android:background="@drawable/round_white"
-                android:padding="5dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="-50dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_date"
+                    android:id="@+id/img"
+                    android:transitionName="img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="UnusedAttribute"/>
+
+                <ImageView
+                    android:id="@+id/shadow_bottom"
+                    android:src="@drawable/bottom_shadow"
                     android:layout_alignBottom="@id/img"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="5dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_load_photo"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    />
 
                 <TextView
-                    android:id="@+id/published_at"
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"
+                    android:gravity="bottom"
+                    android:text="Author"
+                    android:textColor="@android:color/white"
+                    android:ellipsize="end"
+                    android:layout_alignTop="@id/layout_date"
+                    android:layout_alignEnd="@id/layout_date"
+                    android:layout_alignStart="@id/title"/>
+                <FrameLayout
+                    android:id="@+id/layout_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="01 January 2020"
-                    android:textColor="#606060"
-                    android:layout_marginStart="27dp"
-                    android:layout_marginEnd="10dp"/>
+                    android:layout_below="@id/img"
+                    android:background="@drawable/round_white"
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="-50dp">
 
-            </FrameLayout>
+                    <ImageView
+                        android:src="@drawable/ic_date_white_24dp"
+                        android:layout_alignBottom="@id/img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"/>
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                android:textColor="@color/colorTextTitle"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-light"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:textSize="17sp"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/img"/>
+                    <TextView
+                        android:id="@+id/published_at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01 January 2020"
+                        android:textColor="#fff"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginEnd="10dp"/>
 
-            <TextView
-                android:id="@+id/desc"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:text="Description"
-                android:textColor="@color/colorTextTitle"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-light"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:textSize="17sp"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/title"/>
+                </FrameLayout>
 
-            <TextView
-                android:id="@+id/source"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/desc"
-                android:fontFamily="sans-serif-light"
-                android:drawablePadding="10dp"
-                android:maxLines="1"
-                android:gravity="bottom"
-                android:text="Source"
-                android:textStyle="bold"
-                android:textColor="@color/colorTextTitle"
-                android:ellipsize="end"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="10dp"/>
+                <ImageView
+                    android:id="@+id/ver_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/horizental_line"
+                    android:layerType="software"
+                    android:layout_below="@id/img"/>
 
-            <TextView
-                android:id="@+id/time"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/desc"
-                android:fontFamily="sans-serif-light"
-                android:drawablePadding="10dp"
-                android:maxLines="1"
-                android:text="time"
-                android:ellipsize="end"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/source"
-                android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textColor="@color/colorTextTitle"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ver_line2"/>
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/colorTextTitle"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/title"/>
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/desc"
+                    android:fontFamily="sans-serif-light"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"
+                    android:gravity="bottom"
+                    android:text="Source"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextTitle"
+                    android:ellipsize="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="10dp"/>
 
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/desc"
+                    android:fontFamily="sans-serif-light"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"
+                    android:text="time"
+                    android:ellipsize="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/source"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:background="@drawable/horizental_line"
+        android:layerType="software"/>
 </FrameLayout>
