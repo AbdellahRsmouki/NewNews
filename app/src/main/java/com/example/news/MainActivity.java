@@ -24,7 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String API_KEY = "9bb46bd0a1c94c14a8bb3dbad9bf8749";
+    public static final String API_KEY = "add yours";
     private RecyclerView recyclerView;
     private androidx.recyclerview.widget.RecyclerView.LayoutManager layoutManager;
     private List<Article> articles = new ArrayList<>();
