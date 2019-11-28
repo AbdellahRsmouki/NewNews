@@ -10,6 +10,10 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
+        /**
+         * API kEY: 9bb46bd0a1c94c14a8bb3dbad9bf8749
+         */
+
 public class Utils {
 
     public static ColorDrawable[] vibrantLightColorList =
